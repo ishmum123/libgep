@@ -1,8 +1,5 @@
-all: Bismillah.cpp
-	g++ -o FunctionGenerator -c -Wall Bismillah.cpp 
-
 test: 
-	g++ -o TestFunctions Tests/HelpMeYaAllah.cpp -lcppunit
+	g++ -o TestFunctions Tests/TestRunner.cpp -lcppunit
 
 cleantest:
 	rm TestFunctions
