@@ -1,3 +1,6 @@
+#ifndef __TEST_FUNCTIONS_H__
+#define __TEST_FUNCTIONS_H__
+
 #include <cppunit/TestCase.h>
 #include <cppunit/TestFixture.h>
 #include <cppunit/ui/text/TextTestRunner.h>
@@ -47,3 +50,5 @@ void TestFunctions::setUp() {
 	f6 = new MultiplyFunction(x, y);
 	f7 = new DivideFunction(x, y);
 }
+
+#endif

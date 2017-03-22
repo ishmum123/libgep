@@ -1,3 +1,6 @@
+#ifndef __FILE_PROCESSOR_H__
+#define __FILE_PROCESSOR_H__
+
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -69,3 +72,5 @@ FileProcessor::FileProcessor(const string fileName) {
 	fl f(fileName);		
 	while (f) if (getline(f, sline)) processLine();
 }
+
+#endif

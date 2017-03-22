@@ -6,7 +6,7 @@
 class Function { public: virtual double run() = 0; };
 
 class OneArgFunction : public Function {
-public: OneArgFunction(double d1) { this->d1 = d1; }
+public: OneArgFunction(double d1) : d1 (d1) {}
 protected: double d1;
 };
 
@@ -29,11 +29,7 @@ public:
 };
 
 class TwoArgFunction : public Function {
-public: 
-	TwoArgFunction(double d1, double d2) {
-		this->d1 = d1;
-		this->d2 = d2;	
-	}
+public: TwoArgFunction(double d1, double d2) : d1 (d1), d2 (d2) {}
 protected: double d1, d2;
 };
 
@@ -59,6 +55,10 @@ class DivideFunction : public TwoArgFunction {
 public: 
 	DivideFunction(double d1, double d2) : TwoArgFunction(d1, d2) {}
 	double run() { return (d1 / d2); } 
+};
+
+class FunctionFactory {
+	
 };
 
 #endif
