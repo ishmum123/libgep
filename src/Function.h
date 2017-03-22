@@ -58,7 +58,38 @@ public:
 };
 
 class FunctionFactory {
-	
+	double result;
+	double calculateResultAndRemovePointer(Function *f);
+public:
+	double getResult(int i, double d);
+	double getResult(int i, double d1, double d2);
 };
+
+double calculateResultAndRemovePointer(Function *f) {
+	double result = f->run();
+	delete f;
+	return result; 
+}
+
+double FunctionFactory::getResult(int i, double d) {
+	Function *f;
+	switch i {
+		case 1: f = new DoNothingFunction(d);
+		case 2: f = new InvertValueFunction(d);
+		case 3: f = new LogFunction(d);
+	}
+	return calculateResultAndRemovePointer(f);
+}
+
+double FunctionFactory::getResult(int i, double d1, double d2) {
+	Function *f;
+	switch i {
+		case 1: f = new AddFunction(d1, d2);
+		case 2: f = new SubtractFunction(d1, d2);
+		case 3: f = new MultiplyFunction(d1, d2);
+		case 4: f = new DivideFunction(d1, d2);
+	}
+	return calculateResultAndRemovePointer(f);
+}
 
 #endif

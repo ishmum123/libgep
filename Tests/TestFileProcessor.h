@@ -40,7 +40,7 @@ protected:
 void TestFileProcessor::testGetLineValueMap() {
 	vector<double> dv1 = fp->getLineValueMap()[150];
 	//CPPUNIT_ASSERT(1.8 = dv1.at(3));
-	//TODO: This as well
+	//TODO: This is garbage as well
 }
 
 void TestFileProcessor::testGetClassMap() {
