@@ -32,16 +32,16 @@ public:
 void MoveListGenerator::applyTwoArgMove() {
 	TwoArgMove m = {(rand() % k), vd.at(x), vd.at(y)};
 	vd.push_back(ff.getResult(m.funcNum, vd.at(m.paramOne), vd.at(m.paramTwo)));
-	vd.erase(vd.begin() + x);
-	vd.erase(vd.begin() + (y - 1))
-	vm.push_back(m);
+	vd.erase(vd.begin() + y);
+	vd.erase(vd.begin() + x);	
+        vm.push_back(m);
 }
 
 void MoveListGenerator::getTwoRandomNumbers() {
 	x = (rand() % (vd.size() - 1));
 	y = (rand() % (vd.size() - 1));
 	while (x == y) y = (rand() % (vd.size() - 1));
-	if (y > x) swapVal(&x, &y);
+	if (y < x) swapVal(&x, &y);
 }
 
 void MoveListGenerator::applyOneArgMove(int i, int j) {
