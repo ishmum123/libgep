@@ -1,6 +1,14 @@
+#include <cppunit/TestResult.h>
+#include <cppunit/TestResultCollector.h>
+#include <cppunit/TestRunner.h>
+#include <cppunit/BriefTestProgressListener.h>
+#include <cppunit/CompilerOutputter.h>
+
 #include "TestFunctions.h"
+#include "TestFileProcessor.h"
 
 CPPUNIT_TEST_SUITE_REGISTRATION(TestFunctions);
+CPPUNIT_TEST_SUITE_REGISTRATION(TestFileProcessor);
 
 using namespace CPPUNIT_NS;
 
