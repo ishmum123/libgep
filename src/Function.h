@@ -57,6 +57,7 @@ public:
 	double run() { return (d1 / d2); } 
 };
 
+//TODO: A Factory Pattern Might Be Redundant Here If No Extension Is Required
 class FunctionFactory {
 	double result;
 	double calculateResultAndRemovePointer(Function *f);

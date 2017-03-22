@@ -14,10 +14,10 @@ using namespace std;
 typedef vector<Function*> vfp;
 typedef vector<double> dv;
 typedef vector<string> sv;
+typedef vector<Move> vmv;
 
 struct S { unsigned int b : 2; };
 
-typedef vector<Move> vmv;
 typedef vector<S> vsb;
 
 vfp getFunctions() { return {new AddFunction(), new SubtractFunction(), new MultiplyFunction(), new DivideFunction()}; }

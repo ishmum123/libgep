@@ -39,6 +39,7 @@ protected:
 	void testSubtract() { CPPUNIT_ASSERT((x - y) == f5->run()); }
 	void testMultiply() { CPPUNIT_ASSERT((x * y) == f6->run()); }
 	void testDivide() { CPPUNIT_ASSERT((x / y) == f7->run()); }
+	//TODO: FunctionFactory Tests Need To Be Added
 };
 
 void TestFunctions::setUp() {
